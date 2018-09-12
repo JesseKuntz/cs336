@@ -1,34 +1,41 @@
+// Date: 9/12/2018
+// Name: Jesse Kuntz
+
+// ----------------------------------
+// Person Prototype
 function Person(name, birthdate, friends, greeting) {
     this.name = name,
     this.birthdate = birthdate,
     this.friends = friends,
     this.greeting = greeting;
-
-    this.setName = function(newName) {
-        this.name = newName;
-    }
-
-    this.addFriend = function(newFriend) {
-        this.friends.push(newFriend);
-    }
-
-    this.printGreeting = function() {
-        console.log(this.greeting);
-    }
-
-    // function cred: http://jsfiddle.net/codeandcloud/n33RJ/
-    this.computeAge = function() {
-        var today = new Date();
-        var formattedBirthDate = new Date(birthdate);
-        var age = today.getFullYear() - formattedBirthDate.getFullYear();
-        var m = today.getMonth() - formattedBirthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < formattedBirthDate.getDate())) {
-            age--;
-        }
-        return age;
-    }
 }
 
+Person.prototype.setName = function(newName) {
+    this.name = newName;
+}
+
+Person.prototype.addFriend = function(newFriend) {
+    this.friends.push(newFriend);
+}
+
+Person.prototype.printGreeting = function() {
+    console.log(this.greeting);
+}
+
+// function cred: http://jsfiddle.net/codeandcloud/n33RJ/
+Person.prototype.computeAge = function() {
+    var today = new Date();
+    var formattedBirthDate = new Date(this.birthdate);
+    var age = today.getFullYear() - formattedBirthDate.getFullYear();
+    var m = today.getMonth() - formattedBirthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < formattedBirthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+// ----------------------------------
+// Testing Person
 var Jesse = new Person("Jesse", "1996/12/30", [], "Hello Gov'ner!");
 
 // These are my friends.
@@ -64,6 +71,8 @@ console.log("Original name: " + Jesse.name);
 Jesse.setName("Spaghetti");
 console.log("New name: " + Jesse.name);
 
+// ----------------------------------
+// Student Prototype
 function Student(name, birthdate, friends, greeting, subject) {
     Person.call(this, name, birthdate, friends, greeting)
 
@@ -72,13 +81,14 @@ function Student(name, birthdate, friends, greeting, subject) {
 
 Student.prototype = new Person();
 
+// ----------------------------------
+// Testing Student
 var Leo = new Student("Leo", "1900/01/01", [], "Hey, my name is Leo and I am a student.", "Karate");
 
 console.log("Leo is a Student: " + (Leo instanceof Student));
 console.log("Leo is a Person: " + (Leo instanceof Person));
 console.log("Jesse is a Student: " + (Jesse instanceof Student));
 
-// Checking some of the inherited methods.
 console.log("Leo is " + Leo.computeAge() + " years old.");
 
 Leo.addFriend(Jesse);
