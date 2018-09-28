@@ -1,0 +1,151 @@
+/* Affects all <strong> tags. */
+strong {
+  color: #f00;
+  font: 200% serif;
+}
+
+/* Affects all the classes with the given names. */
+.spinach {
+  color: #080;
+}
+
+/* Affects all the IDs with the name "first". */
+#first {
+  font-style: italic;
+}
+
+/* Affects all <p> tags. */
+p {
+  color: #00f;
+}
+
+p:before{
+  content: url("yellow-pin.png");
+}
+
+/* Affects everything in the body. */
+body {
+  font: 16px "Verdana", sans-serif;
+  background: url("Blue-rule.png");
+}
+
+
+/* Style information for the lists. */
+body {
+  counter-reset: headnum mynum;
+}
+
+h3 {
+  text-align: center;
+}
+
+h3:before {
+  content: "(" counter(headnum, upper-latin) ") ";
+  counter-increment: headnum;
+}
+
+p.numbered:before {
+  content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;
+}
+
+li {
+  list-style: lower-roman;
+  margin-bottom: 8px;
+}
+
+ul, #numbered {
+  border: 1em solid lightseagreen;
+}
+
+
+/* Style information for the table. */
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+  margin-top: 1em;
+}
+
+#demo-table > caption {
+  text-align: right;
+  font-style: italic;
+  border-top: .2em solid #4ca;
+  margin-top: .5em;
+  caption-side: bottom;
+}
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+}
+
+
+#demo-table th {
+  /* font-weight: bold; */
+  padding-left: .5em;
+}
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+}
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+}
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+}
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+}
+
+#demo-table tbody th:after {
+  content: ":";
+}
+
+#demo-table tbody td {
+  border:1px solid #7a7;
+}
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+}
+
+#demo-table tfoot th {
+  color: blue;
+}
+
+#demo-table tfoot th:after {
+  content: ":";
+}
+
+#demo-table > tfoot td {
+  background-color: #cee;
+}
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+}
+
+
+/* The lonely pin. */
+#fixed-pin  {
+  position:fixed;
+  top: 4px;
+  right: 8px;
+}
