@@ -16,6 +16,10 @@ body {
     font-family: 'Lucida Sans', Verdana, sans-serif;
 }
 
+ul {
+    margin-top: 10px
+}
+
 #rpiLogo {
     width: 20%;
     display: block;
