@@ -1,0 +1,84 @@
+/*
+*  Author: Jesse Kuntz
+*  Date: 10/03/2018
+*/
+
+
+// Variable section
+padding-size = 10px
+border-specs = 1px solid black
+
+body
+  font: 24px Helvetica
+  background: #999999
+
+#main
+  min-height: 400px
+  margin: 0px
+  padding: 0px
+  display: flex
+  flex-flow: row
+
+  article
+    padding: padding-size
+    border: border-specs
+    background: #dddd88
+    flex: 3 1 60%
+    order: 2
+
+  nav
+    padding: padding-size
+    border: border-specs
+    background: #ccccff
+    flex: 1 6 20%
+    order: 1
+    text-align: right
+
+  aside
+    padding: padding-size
+    border: border-specs
+    background: #ccccff
+    flex: 1 6 20%
+    order: 3
+    font-style: italic
+
+header, footer
+  display: block
+  padding: padding-size
+  min-height: 100px
+  background: #ffeebb
+
+header
+  border: border-specs
+  font-size: 2em
+  text-align: center
+  font-weight: bold
+
+footer
+  border: border-specs
+  font-size: .75em
+  font-style: italic
+
+// Too narrow to support three columns
+@media all and (max-width: 640px)
+  #main, #page
+    flex-direction: column
+
+    nav
+      order: 1
+      min-height: 100px
+      max-height: 100px
+      float: left
+      text-align: left
+
+    article
+      order: 2
+      min-height: 300px
+      max-height: 300px
+
+    aside
+      order: 3
+
+  #main > aside, header, footer
+    min-height: 75px
+    max-height: 75px

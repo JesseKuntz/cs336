@@ -1,0 +1,14 @@
+{
+  "name": "lab04",
+  "version": "1.0.0",
+  "description": "Code for Lab 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jesse Kuntz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
