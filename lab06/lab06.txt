@@ -1,0 +1,9 @@
+6.1a:
+STANDARD BROWSER: Just a GET. The standard browser (with just a server) won't be able to access HEAD, DELETE, POST, or PUT without special triggers that the form will provide.
+CURL: GET, HEAD, POST, PUT, DELETE.
+
+6.1b: 404: NOT_FOUND, for routes that can't be found.
+
+6.2a: HTML Forms ONLY support GET and POST
+
+6.2b: The data is sent back to the server as JSON. Here is one test: {"user_name":"Jesse Kuntz","user_mail":"jrk54@students.calvin.edu","user_message":"This is a wonderful test!"}
