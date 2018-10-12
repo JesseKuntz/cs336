@@ -29,12 +29,14 @@ app.head('/request', function (req, res) {
 
 app.post('/request', function (req, res) {
     res.status(HttpStatus.OK);
-    res.json(req.body);
+    console.log("This is a POST.")
+    res.send(req.body);
 });
 
 app.put('/request', function (req, res) {
     res.status(HttpStatus.OK);
-    res.send('Got a PUT request at /request');
+    console.log("This is a PUT.")
+    res.send(req.body);
 });
 
 app.delete('/request', function (req, res) {
@@ -47,7 +49,6 @@ app.post('/form', function (req, res) {
     console.log("Look at the data on the site.");
     res.send("Look at this data: Username: " + req.body.user_name + " User Email: " + req.body.user_mail + " Message: " + req.body.user_message);
 });
-
 
 app.all('*', function (req, res) {
     res.status(HttpStatus.NOT_FOUND);
