@@ -1,0 +1,12 @@
+1A. The new bundle file is 5.9kb.
+2B. Babel did was able to translate the JSX into pure JS for the browser to understand.
+3C. You can, but it doesn't include any of the comments because the server is not running in that case.
+4D. It specifies that Babel is going to need to look for JSX to translate.
+
+2A. For starters, the bundle.js is MUCH larger than it was before (1.09mb). The index.html file is the same as before.
+2B. This way, it is local, all coming from one source.
+2C. Only bundle.js is being loaded. Everything is inside there!
+
+3A1. The change automatically occurs on the SPA webpage, but nothing happens to the bundle/index files.
+3A2. It spits back JSON of all the comment data. The SPA on this port does not change from the changes made earlier.
+3B. Because the development config provides really quick feedback without rebundling, it is worth it. It takes time to bundle, and it is annoying to do everytime that you make a change.
