@@ -1,0 +1,7 @@
+1A. MongoDB can handle more diverse data types and really match up with any language, and can scale much better. MySQL can handle more complex, multi-row transactions.
+1B. The cloud databases are always up, whereas a local database would only be accessible by my computer and only after I start it up.
+1C. Not good for production. The mLab site actually tells us that there is no redundancy, which is not suitable for production.
+
+2A. Just the npm start. We were just making changes to the server, not the React app, so there was no reason to build it like that.
+2B. They are automatically changed on the application once the changes are made in Mongo.
+2C. Because the data is easily stored as JSON and changes can be made quickly, (plus there could be tons and tons of comments) then noSQL is the way to go.
