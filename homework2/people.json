@@ -1,0 +1,26 @@
+[
+    {
+      "firstName": "Jesse",
+      "lastName": "Kuntz",
+      "loginID": "42",
+      "startDate": "1996-12-30"
+    },
+    {
+      "firstName": "Aaron",
+      "lastName": "Kuntz",
+      "loginID": "100",
+      "startDate": "1999-10-20"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bell",
+      "loginID": "80",
+      "startDate": "1996-08-22"
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Kuntz",
+      "loginID": "123",
+      "startDate": "1963-08-28"
+    }
+  ]
