@@ -1,3 +1,5 @@
-1A.
-1B.
+1A. Development maximizes work efficiency: how quickly can you make changes and check for them? Production, now, maximizes web efficiency. Does it run well on every browser? Is the data being loaded as small and efficient as can be?
+1B. Production uses autoprefixer, which basically makes your CSS compatible for any browser. It also tells webpack that you are running production now, which will add optimizations in (such as Uglify). You can search the source files from the broswer and see the word producion pop up EVERYWHERE now.
 
+2A. It is cheap, especially if you are not getting a lot of traffic. Very easy to set up. Database integration is a breeze.
+2B. It just uses the specified NPM scripts: install and start. You can see the output as it is building.
