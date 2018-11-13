@@ -17,8 +17,6 @@ assert = require('assert');
 var app = express();
 var db;
 
-var COMMENTS_FILE = path.join(__dirname, 'comments.json');
-
 var MongoClient = require('mongodb').MongoClient
 
 app.set('port', (process.env.PORT || 3000));
