@@ -1,0 +1,7 @@
+1A.
+1B. They are just different. However, for a more robust application, BrowserHistory is better. It knows how to respond to any possible URL. HashHistory is more used for static, single page applications and legacy browsers.
+1C.
+
+2A.
+2B.
+2C.
