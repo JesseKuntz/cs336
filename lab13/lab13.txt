@@ -1,7 +1,7 @@
-1A.
+1A. Initially, there is not much of a benefit. However, when more pages are added, it is much faster to just load the data on the front-end than to load a brand new HTML page every time, which is the benefit.
 1B. They are just different. However, for a more robust application, BrowserHistory is better. It knows how to respond to any possible URL. HashHistory is more used for static, single page applications and legacy browsers.
-1C.
+1C. While hashHistory creates its own system of history and adding unique keys to the end of URLs, browserHistory needs to be ready for the URLs that it is going to handle.
 
-2A.
-2B.
-2C.
+2A. The new CommentEdit component maintains the author and text as state, while the CommentBox maintains all the data (comments) and _isMounted as a state.
+2B. PUT and DELETE in the CommentEdit component use the router to move back to the homepage, because new data is going to appear there. However, cancel just links back to the homepage because it knows no data is changed.
+2C. A normal hyperlink links to a file, whereas the react router Link links to a route.
